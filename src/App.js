@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Components/Button";
 import Header from "./Components/Header";
+import Users from "./Components/Users/Users";
 
 const name = "React Js";
 class App extends React.Component {
@@ -39,8 +40,9 @@ class App extends React.Component {
         >
           decrement
         </button>
-        <Button name="Play Store" />
-        <Button name="App Store" />
+        {/* <Button name="Play Store" />
+        <Button name="App Store" /> */}
+        <Users />
       </div>
     );
   }

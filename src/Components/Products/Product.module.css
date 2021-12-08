@@ -1,0 +1,5 @@
+/* BEM naming conventions */
+.error {
+  color: green;
+  font-weight: bolder;
+}

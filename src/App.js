@@ -43,6 +43,9 @@ class App extends React.Component {
           />
         </div>
 
+        {/* User Component */}
+        <Users isLogin={false}/>
+
         {this.state.isUserLogin ? (
           <div> Welcome User </div>
         ) : (

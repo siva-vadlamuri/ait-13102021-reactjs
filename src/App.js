@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import Product from "./Components/Products/Product";
 import Users from "./Components/Users/Users";
 import "./App.css";
+import Pagination from "./Components/Pagination/Pagination";
 
 const name = "React Js";
 class App extends React.Component {
@@ -22,7 +23,8 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <div>
+        <Pagination />
+        {/* <div>
           <p class="error">Error ocurred </p>
         </div>
         <div className="d-flex justify-content-around mt-3">
@@ -41,10 +43,10 @@ class App extends React.Component {
             description="Build With M13 Chip"
             price={45000}
           />
-        </div>
+        </div> */}
 
         {/* User Component */}
-        <Users isLogin={false}/>
+        {/* <Users isLogin={false}/> */}
 
         {this.state.isUserLogin ? (
           <div> Welcome User </div>

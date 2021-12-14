@@ -43,50 +43,65 @@ class Pagination extends React.Component {
     // console.log(num);
     // this.updateTheUserData(num);
   };
+  componentWillUnmount() {
+    // Clean up the code
+    console.log("Component Will unmount");
+  }
   render() {
     return (
       <div>
-        <div className="container mt-4">
-          <div className="row">
-            {this.state.users &&
-              this.state.users.length > 0 &&
-              this.state.users.map((user) => (
-                <div key={user.id} className="col-md-6 mt-3">
-                  <div className="card p-5">
-                    <div className="row">
-                      <div className="col-md-4">
-                        <img
-                          className="img-fluid"
-                          src={user.picture}
-                          alt={user.firstName}
-                        />
-                      </div>
-                      <div className="col-md-8">
-                        <div>
-                          <p>id:{user.id}</p>
-                          <p>
-                            {user.title} {user.firstName}
-                          </p>
+        {this.state.users && this.state.users.length > 0 ? (
+          <div className="container mt-4">
+            <div>
+              <div className="row">
+                {this.state.users &&
+                  this.state.users.length > 0 &&
+                  this.state.users.map((user) => (
+                    <div key={user.id} className="col-md-6 mt-3">
+                      <div className="card p-5">
+                        <div className="row">
+                          <div className="col-md-4">
+                            <img
+                              className="img-fluid"
+                              src={user.picture}
+                              alt={user.firstName}
+                            />
+                          </div>
+                          <div className="col-md-8">
+                            <div>
+                              <p>id:{user.id}</p>
+                              <p>
+                                {user.title} {user.firstName}
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  ))}
+              </div>
+            </div>
+            <div className="container">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+                <button
+                  className="btn btn-primary"
+                  onClick={() => {
+                    this.handleButtonClick(num);
+                  }}
+                >
+                  {num}
+                </button>
               ))}
+            </div>
           </div>
-        </div>
-        <div className="container">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
-            <button
-              className="btn btn-primary"
-              onClick={() => {
-                this.handleButtonClick(num);
-              }}
-            >
-              {num}
-            </button>
-          ))}
-        </div>
+        ) : (
+          <section>
+            <img
+              src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif"
+              alt="loader"
+            />
+          </section>
+        )}
       </div>
     );
   }

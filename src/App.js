@@ -5,6 +5,8 @@ import Product from "./Components/Products/Product";
 import Users from "./Components/Users/Users";
 import "./App.css";
 import Pagination from "./Components/Pagination/Pagination";
+import ContactUs from "./Components/ContactUs/ContactUs";
+import Routing from "./Components/Routing/Routing";
 
 const name = "React Js";
 class App extends React.Component {
@@ -23,7 +25,9 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Pagination />
+        <Routing />
+        {/* <Pagination /> */}
+        {/* <ContactUs /> */}
         {/* <div>
           <p class="error">Error ocurred </p>
         </div>
@@ -48,11 +52,11 @@ class App extends React.Component {
         {/* User Component */}
         {/* <Users isLogin={false}/> */}
 
-        {this.state.isUserLogin ? (
+        {/* {this.state.isUserLogin ? (
           <div> Welcome User </div>
         ) : (
           <div>Please Login</div>
-        )}
+        )} */}
 
         {/* Header */}
         {/* Main Content */}

@@ -26,6 +26,7 @@ class App extends React.Component {
       <div>
         <Header />
         <Routing />
+        {/* </Footer> */}
         {/* <Pagination /> */}
         {/* <ContactUs /> */}
         {/* <div>

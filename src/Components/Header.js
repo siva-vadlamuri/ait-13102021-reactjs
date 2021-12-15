@@ -32,9 +32,9 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
+                <Link to="/counter" className="nav-link" href="#">
+                  Counter
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">

@@ -22,19 +22,19 @@ function Pagination() {
 
   //   ComponentDidMount
 
-  useEffect(() => {
-    console.log("Component Did Mount");
-  }, []);
+  // useEffect(() => {
+  //   console.log("Component Did Mount");
+  // }, []);
 
-  useEffect(() => {
-    console.log("Component Did Update");
-  }, [pageNumber]);
-  // componentWillUnmount
-  useEffect(() => {
-    return () => {
-      console.log("Component Will Unmount");
-    };
-  });
+  // useEffect(() => {
+  //   console.log("Component Did Update");
+  // }, [pageNumber]);
+  // // componentWillUnmount
+  // useEffect(() => {
+  //   return () => {
+  //     console.log("Component Will Unmount");
+  //   };
+  // });
   useEffect(() => {
     getUsersData();
     return () => {

@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import ContactUs from "../ContactUs/ContactUs";
 import Counter from "../hooks/Counter";
 import Pagination from "../hooks/Pagination";
+import ReducerHook from "../hooks/ReducerHook/ReducerHook";
 // import Pagination from "../Pagination/Pagination";
 
 export default class Routing extends Component {
@@ -15,6 +16,7 @@ export default class Routing extends Component {
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/users" element={<Pagination />} />
           <Route path="/counter" element={<Counter />} />
+          <Route path="/reducer" element={<ReducerHook />} />
         </Routes>
       </div>
     );

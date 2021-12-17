@@ -4,6 +4,9 @@ import { ThemeContext } from "../../../App";
 
 function GrandChild() {
   const { theme, setTheme } = useContext(ThemeContext);
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
   //   console.log(data);
   return (
     <div>
@@ -11,7 +14,7 @@ function GrandChild() {
       <button
         className="btn btn-info"
         onClick={() => {
-          setTheme("dark");
+          toggleTheme();
         }}
       >
         Toggle
